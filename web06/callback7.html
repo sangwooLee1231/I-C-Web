@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--  1번  -->
+    <form id="colorForm">
+        <input type="radio" name="bgColor" value="Yellow"> Yellow<br>
+        <input type="radio" name="bgColor" value="Pink"> Pink<br>
+        <input type="radio" name="bgColor" value="LightBlue"> LightBlue<br>
+        <button type="button" id="bgColorSubmit">Apply</button>
+    </form>
+    <p id="output"></p>
+
+
+
+    <!-- 2번  -->
+    <form id="hobbyForm">
+        <label><input type="checkbox" name="hobby" value="Reading"> Reading</label>
+        <label><input type="checkbox" name="hobby" value="Traveling"> Traveling</label>
+        <label><input type="checkbox" name="hobby" value="Cooking"> Cooking</label>
+        <label><input type="checkbox" name="hobby" value="Gaming"> Gaming</label>
+        <button type="button" id="submitHobby">Submit</button>
+    </form>
+    <p id="outputHobby"></p>
+
+
+    <!-- 3번 -->
+    <form id="termsForm">
+        <label>
+            <input type="checkbox" id="agreeTerms"> I agree to the terms and conditions
+        </label>
+        <br>
+        <button type="button" id="submitTerms">Submit</button>
+    </form>
+
+    <script>
+        //    <!-- 1-1번 -->
+        document.getElementById("bgColorSubmit").addEventListener(`click`, function () {
+            let radio = document.querySelector('input[name="bgColor"]:checked');
+            let outputElement = document.getElementById("output");
+
+            if (radio) {
+                document.body.style.backgroundColor = radio.value;
+                outputElement.textContent = `You selected: ${radio.value}`;
+            }
+            else {
+                outputElement.textContent = "please select a color";
+            }
+        });
+
+        // <!-- 2-1번 -->
+        document.getElementById("submitHobby").addEventListener('click', function () {
+            const checkboxes = document.querySelectorAll('input[name="hobby"]:checked');
+            const selectedhobbies = [];
+            let outputElement2 = document.getElementById("outputHobby");
+
+            for (let i = 0; i < checkboxes.length; i++) {
+                selectedhobbies.push(checkboxes[i].value);
+            }
+            outputElement2.textContent = selectedhobbies;
+        });
+
+        // <!-- 3-1번 -->
+        document.getElementById("submitTerms").addEventListener('click', function () {
+            const isChecked = document.getElementById('agreeTerms').checked;
+            if (isChecked) {
+                alert("확인되었습니다.");
+            } else {
+                alert("체크하세요")
+            }
+        });
+
+    </script>
+
+</body>
+</html>

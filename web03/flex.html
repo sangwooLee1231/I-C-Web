@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+div {
+      text-align: center;
+
+    }
+
+    .outer {
+      display: grid;
+      grid-template-rows: 100px 150px;
+      grid-template-columns: auto auto auto;
+
+    }
+
+    #d1 {
+
+      align-content: center;
+      background-color: aqua;
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+    }
+
+  
+    </style>
+</head>
+<body>
+    <div class = "outer">
+        <!-- 한줄 복사 : Alt + Shift + 화살표 아래-->
+        <div id= "d1" style="background-color: aqua;">감자가 너무 맛있어. 짱이야!</div>
+        <div id= "d2" style="background-color: greenyellow;">고구마가 너무 맛있어. 짱이야!</div>
+        <div id= "d3" style="background-color: yellow;">양파가 너무 맛있어. 짱이야!</div>
+    </div>
+</body>
+</html>

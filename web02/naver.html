@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        /* all */
+        header {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /* up */
+        #div1 {
+            padding: 10px;
+            border-bottom: 1px solid rgb(236, 236, 236);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #div1 > img {
+            height: 50px;
+        }
+
+        #div1 > a {
+            color: #03c75a;
+            font-size: 30px;
+            font-weight: bolder;
+            margin-right: auto;
+        }
+
+        /* search bar */
+        #search_bar {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        #search_bar > input {
+            width: 300px;
+            height: 35px;
+            border: 1px solid #03c75a;
+            border-radius: 5px;
+            padding: 0 15px;
+            font-size: 14px;
+        }
+        #search_bar > input:focus{
+           outline: none;
+        }
+
+        #search_bar > button {
+            background-color: #03c75a;
+            border: none;
+            height: 35px;
+            width: 35px;
+            border-radius: 5%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #search_bar > button > img {
+            height: 20px;
+            width: 20px;
+        }
+
+        /* down */
+        /* nav */
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        li {
+            margin-left: 25px;
+        }
+
+        li > a {
+            color: black;
+        }
+
+        .green > a {
+            color: #03c75a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="div1">
+            <img src="images.png" alt="네이버 로고">
+            <a href="home.html">NAVER</a>
+            <div id="search_bar">
+                <input type="search" placeholder="검색어를 입력하세요">
+                <button><img src="magnifier.png" alt="검색"></button>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li class="green"><a href="#">메일</a></li>
+                <li class="green"><a href="#">카페</a></li>
+                <li class="green"><a href="#">블로그</a></li>
+                <li class="green"><a href="#">지식iN</a></li>
+                <li class="green"><a href="#">쇼핑</a></li>
+                <li class="green"><a href="#">쇼핑Live</a></li>
+                <li class="green"><a href="#">Pay</a></li>
+                <li class="green"><a href="#">TV</a></li>
+                <li><a href="#">사전</a></li>
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">증권</a></li>
+                <li><a href="#">부동산</a></li>
+                <li><a href="#">지도</a></li>
+                <li><a href="#">VIBE</a></li>
+                <li><a href="#">도서</a></li>
+                <li><a href="#">웹툰</a></li>
+                <li>
+                    <select>
+                        <option value="" selected>더보기</option>
+                        <option value="">옵션1</option>
+                        <option value="">옵션2</option>
+                        <option value="">옵션3</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

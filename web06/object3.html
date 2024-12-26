@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const apt = {
+            name: "여의도파크센터",
+            address: "영등포구 여의대로 8",
+            TotalOffice: 246,
+            areaRange: "127.25~495.05m²",
+            recentTransaction: {
+                size: "202m²",
+                price: "17억4000"
+            },
+            displayInfo: function () {
+                console.log(`Name ${this.name}`);
+                console.log(`Address ${this.address}`);
+                console.log(`TotalOffice ${this.TotalOffice}`);
+                console.log(`AreaRange ${this.areaRange}`);
+            },
+            getRecentTransaction: function () {
+                return `Recent Transaction: ${this.recentTransaction.size} -
+                (price: ${this.recentTransaction.price})`;
+            }
+        };
+        apt.displayInfo()
+        let result = apt.getRecentTransaction()
+        console.log(result)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

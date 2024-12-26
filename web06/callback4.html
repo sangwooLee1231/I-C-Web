@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="colorForm">
+        <input type="radio" name="color" value="Red"> Red
+        <input type="radio" name="color" value="Blue"> Blue
+        <input type="radio" name="color" value="Green"> Green <br>
+        <button type="button" id="colorSubmit">Submit</button>
+    </form>
+    <hr>
+    <p id="output"></p>
+
+    <script>
+        document.getElementById('colorSubmit').addEventListener('click', function () {
+            // 선택된 라디오 버튼 찾기
+            const selectedRadio = document.querySelector('input[name="color"]:checked');
+
+            // 출력 영역
+            const outputElement = document.getElementById('output');
+
+            if (selectedRadio) {
+                // 선택된 값 가져오기
+                outputElement.textContent = `You selected: ${selectedRadio.value}`;
+            } else {
+                // 선택된 값이 없을 때
+                outputElement.textContent = "Please select a color!";
+            }
+        })
+    </script>
+
+</body>
+
+</html>

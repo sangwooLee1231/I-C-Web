@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = 0;
+        while (true) {
+            let b = prompt("1)증가, 2)감소 3)종료를 선택해주세요");
+            b1 = parseInt(b);
+            if (b == 1)
+                a++;
+            else if (b == 2)
+                a--;
+            else if (b == 3) {
+                alert("시스템을 종료합니다.\n 현재까지의 카운트는 " + a)
+                break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const person = {
+            name : "Alice",
+            greet : function() {
+                alert(`안녕! 내 이름은 ${this.name}`)
+            },
+            bye() {
+                alert(`${this.name}아! 바이바이`);
+            },
+            info() {
+                return '당신의 이름은' + this.name;
+            }
+        };
+
+        person.greet()
+        person.bye()
+        let result = person.info(); //리턴된 값을 출력, 변수에 넣거나 해야함
+        alert(result)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

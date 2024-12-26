@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add() {
+            let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+            let x1 = parseInt(x)
+            let y1 = parseInt(y)
+            alert(x1 + y1)
+        }
+        function login() {
+            let id = document.getElementById("id").value;
+            let password = document.getElementById("password").value;
+            let resultTag = document.getElementById("result");
+            if (id == 'root' && password == '1234') {
+
+                resultTag.innerHTML = "<h3 style = 'color: red'>로그인성공</h3>";
+            } else {
+                resultTag.innerHTML = "<h3 style = 'color: blue'>로그인실패</h3>";
+            }
+        }
+        function find() {
+            let find = document.getElementById('find').value;
+            location.href = "https://kin.naver.com/search/list.naver?query="+find
+        }
+        function comic() {
+            let find = document.getElementById('comic').value;
+            location.href = "https://comic.naver.com/search?keyword="+find
+        }
+
+    </script>
+
+</head>
+
+<body>
+    숫자1 : <input type="text" id="x"><br>
+    숫자2 : <input type="text" id="y"><br>
+    <button onclick="add()">더하기</button>
+    <hr>
+    아이디: <input type="text" id="id"><br>
+    비밀번호: <input type="password" id="password"><br>
+    <button onclick="login()">로그인</button>
+    <hr>
+    네이버 지식인 검색어 입력 : <input type="text" id="find"> <br>
+    <button onclick="find()">지식인 검색</button>
+    <hr>
+    <!-- alert말고 body에 넣을 때는 넣을 공간을 미리 만들어두세요.! -->
+    <div id="result" style="background: yellow;">
+        결과 들어가는 곳.
+    </div>
+    보고 싶은 웹툰 입력 : <input type = "text" id="comic"> <br>
+    <button onclick="comic()">웹툰 검색</button>
+</body>
+
+</html>

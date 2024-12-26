@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr1 = [10, 20, 30, 40]
+        let result1 = arr1.reduce((x, y) => x + y)
+        console.log(result1)
+
+        let arr2 = [5, 12, 8, 130, 44]
+        let result2 = Math.max(...arr2)
+        console.log(result2)
+
+        let arr3 = [1, 2, 3, 4, 5]
+        console.log(arr3.includes(3))
+
+        let arr4 = [1, 2, 3, 4, 5]
+        let result4 = arr4.filter(x => x !== 3)
+        console.log(result4)
+
+        let arr5 = [30, 10, 20, 50, 40]
+        let result5 = arr5.sort()
+        console.log(result5)
+
+        let arr6 = ["Apple", "Banana", "Cherry"]
+        let result6 = arr6.join(", ")
+        console.log(result6)
+
+        let arr7 = [1, 2, 2, 3, 4, 4, 5]
+        let set = new Set(arr7)
+        let result7 = Array.from(set)
+        console.log(result7)
+
+        let arr8 = [10, 15, 20, 25, 30]
+        let result8 = arr8.filter(x => x % 2 == 0)
+        console.log(result8)
+
+        let arr9 = [2, 3, 4]
+        let result9 = arr9.map(x => x = x * x)
+        console.log(result9)
+
+        let arr10 = [[1, 2], [3, 4], [5, 6]]
+        let result10 = arr10.flat()
+        console.log(result10)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

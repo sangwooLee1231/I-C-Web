@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+
+        @media screen and (max-width: 767px) {
+
+            #hr1 {
+                width: 200px;
+                height: 50px;
+                vertical-align: middle;
+                background-color: black;
+                color: pink;
+            }
+
+            #hr2,
+            #hr3 {
+                display: none;
+            }
+
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 959px) {
+
+            #hr2 {
+                width: 200px;
+                height: 50px;
+                vertical-align: middle;
+                background-color: yellow;
+                color: pink;
+            }
+
+            #hr1,
+            #hr3 {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 960px) {
+
+            #hr3 {
+                width: 200px;
+                height: 50px;
+                vertical-align: middle;
+                background-color: green;
+                color: pink;
+            }
+
+            #hr1,
+            #hr2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <br><br>
+    <span id="hr1">난 블랙핑크</span><br>
+    <span id="hr2">난 옐로우핑크</span><br>
+    <span id="hr3">난 그린핑크</span><br>
+    <br><br>
+
+</body>
+
+</html>
